@@ -48,7 +48,7 @@ public class DijkstraAlgo {
                     // distance(v) + weight(v,w) < distance(w)
                     this.vertexList.get(to).setDistance(newDist); // set
                     // neighbour as new distance3
-                    this.minHeap.offer(this.vertexList.get(to));
+                    this.minHeap.offer(new Vertex(to, newDist));
                 }
             }
             visited[currIdx] = true;

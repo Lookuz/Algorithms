@@ -6,10 +6,17 @@ import java.util.*;
 class Vertex implements Comparable<Vertex> {
     private int _index, _dist;
     private LinkedList<Edge> _edges;
+
     public Vertex(int index) {
-        _index = index; _dist = Integer.MAX_VALUE; // assume unreachable
+        _index = index; _dist = 1000000000; // assume unreachable
         _edges = new LinkedList<Edge>();
     }
+
+    public Vertex(int index, int _dist) {
+        this._index = index;
+        this._dist = _dist;
+    }
+
     public String toString() { return "(V" + _index +": "+ _dist + ")"; }
     public int compareTo(Vertex other) {
         if (_dist != other._dist) return _dist - other._dist;
