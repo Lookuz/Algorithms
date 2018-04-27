@@ -20,9 +20,9 @@ Time complexity to run the algorithm on the entire graph is *O((V + E)lgV)*.
 **Minimum Spanning Tree** <br />
 Algorithms that form a Minimum Spanning Tree(MST) from a graph, which is a subset of edges from a connected graph that connects all vertices in a graph without any cycles, using minimum total edge weight. if there are *N* vertices in the graph, then the number of edges in the MST is *N - 1*.
 Minimum Spanning Trees calculate the minimum total cost of the graph, as well as the *easiest* path from one node to the next(The highest weight of an edge from one vertex to another).
-This implewmentation uses a PriorityQueue/Heap to maintain a Minimum Heap of Edges.
-
+This implementation uses a PriorityQueue/Heap to maintain a Minimum Heap of Edges.
 <br />
+
 **Prim's Algorithm** <br />
 Algorithm that forms the MST from an undirected graph, by growing the MST one vertex at a time. The MST is first formed with the source vertex. At each stage, the edge *e* with the smallest weight that is connected to the current minimum tree is picked, and if it connects the tree to an unvisited *u*, *u* is added the spanning tree.
 Time complexity for getting shortest edge is *O(lgV)*.
