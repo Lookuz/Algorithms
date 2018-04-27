@@ -8,3 +8,7 @@ Algorithms requires use of DirectedGraph.java, Vertex.java and Edge.java for def
 - Dijkstra's Algorithm
 - Prim's Algorithm
 - Topological Sort
+
+Trees<br />
+Balanced Binary Search Tree<br />
+-AVL Tree
