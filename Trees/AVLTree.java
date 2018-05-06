@@ -1,5 +1,3 @@
-import java.util.*;
-
 /**
  * Class that simulates a balanced binary search tree that
  * applies AVL balance property
@@ -61,7 +59,6 @@ public class AVLTree {
             else { // Else find In-Order predecessor to replace current root
                 // to maintain BST property.
                 int newRoot = findInOrderPredecessor(node);
-                delete(newRoot, node);
                 node.value = newRoot;
             }
         }
@@ -116,6 +113,8 @@ public class AVLTree {
         }
 
         parent.right = newRoot.left;
+        parent.height = 1 + Math.max(getHeight(parent.left), getHeight(parent.right));
+        balance(parent);
 
         return newRoot.value;
     }
@@ -134,6 +133,8 @@ public class AVLTree {
         }
 
         parent.left = newRoot.right;
+        parent.height = 1 + Math.max(getHeight(parent.left), getHeight(parent.right));
+        balance(parent);
 
         return newRoot.value;
     }
