@@ -109,8 +109,13 @@ public class AVLTree {
      */
     public int findInOrderPredecessor(Node node) {
         Node newRoot = node.left;
-        while(newRoot.right != null)
+        Node parent = node;
+        while(newRoot.right != null) {
+            parent = newRoot;
             newRoot = newRoot.right;
+        }
+
+        parent.right = newRoot.left;
 
         return newRoot.value;
     }
@@ -122,8 +127,13 @@ public class AVLTree {
      */
     public int findInOrderSuccessor(Node node) {
         Node newRoot = node.right;
-        while(newRoot.left != null)
+        Node parent = node;
+        while(newRoot.left != null) {
+            parent = newRoot;
             newRoot = newRoot.left;
+        }
+
+        parent.left = newRoot.right;
 
         return newRoot.value;
     }
