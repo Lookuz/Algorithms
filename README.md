@@ -11,4 +11,4 @@ Algorithms requires use of DirectedGraph.java, Vertex.java and Edge.java for def
 
 Trees<br />
 Balanced Binary Search Tree<br />
--AVL Tree
+- AVL Tree
